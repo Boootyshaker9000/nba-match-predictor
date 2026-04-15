@@ -7,7 +7,7 @@ This project bridges the gap between Data Science (Python/Scikit-Learn) and Soft
 
 ## Key Features
 * **AI-Powered Predictions:** Uses a serialized Random Forest model for highly accurate sports forecasting.
-* **Dynamic Data Loading:** Automatically loads team statistics, rest days, and star player availability from a local `teams_data.json` database.
+* **Dynamic Data Loading:** Automatically loads team statistics, rest days, and star player availability from a local `team-stats.json` database.
 * **Fatigue Analysis:** Account for "Back-to-Back" games and rest days, a crucial factor in NBA performance.
 * **One-Hot Encoding Integration:** Seamlessly maps categorical team data to the numerical format required by the ONNX runtime.
 * **Self-Contained Deployment:** Optimized for Windows with a clean, responsive WPF user interface.
@@ -23,8 +23,8 @@ This project bridges the gap between Data Science (Python/Scikit-Learn) and Soft
 * `MainWindow.xaml`: Defines the graphical user interface.
 * `MainWindow.xaml.cs`: Contains the prediction logic and ONNX inference engine.
 * `TeamStats.cs`: Data model for deserializing team statistics.
-* `teams_data.json`: Local database containing the latest 5-game averages for all 30 NBA teams.
-* `nba_model.onnx`: The serialized brain of the application.
+* `team-stats.json`: Local database containing the latest 5-game averages for all 30 NBA teams.
+* `nba-model.onnx`: The serialized brain of the application.
 
 ## Installation & Build
 
