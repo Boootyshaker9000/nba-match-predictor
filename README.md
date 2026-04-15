@@ -12,6 +12,36 @@ This project bridges the gap between Data Science (Python/Scikit-Learn) and Soft
 * **One-Hot Encoding Integration:** Seamlessly maps categorical team data to the numerical format required by the ONNX runtime.
 * **Self-Contained Deployment:** Optimized for Windows with a clean, responsive WPF user interface.
 
+## Data Format (JSON)
+The application expects a `team-stats.json` file in the root directory. Each team is identified by its 3-letter abbreviation. Below is an example of the required structure:
+
+```json
+{
+  "BOS": {
+    "PTS_5G": 118.2,
+    "FG_PCT": 0.485,
+    "FG3_PCT": 0.392,
+    "REB": 46.1,
+    "AST": 26.5,
+    "TOV": 11.8,
+    "PLUS_MINUS": 10.2,
+    "DAYS_REST": 2,
+    "STAR_MISSING": 0
+  },
+  "LAL": {
+    "PTS_5G": 115.5,
+    "FG_PCT": 0.491,
+    "FG3_PCT": 0.375,
+    "REB": 42.8,
+    "AST": 28.1,
+    "TOV": 13.5,
+    "PLUS_MINUS": 1.5,
+    "DAYS_REST": 1,
+    "STAR_MISSING": 1
+  }
+}
+```
+
 ## Tech Stack
 * **Frontend:** C# / WPF (.NET 8.0)
 * **AI Runtime:** Microsoft.ML.OnnxRuntime
