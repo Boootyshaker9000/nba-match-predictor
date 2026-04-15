@@ -1,3 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Windows;
 
-Console.WriteLine("Hello, World!");
+namespace NBAMatchPredictor
+{
+    public class Program
+    {
+        [STAThread]
+        public static void Main()
+        {
+            Application app = new Application();
+            
+            MainWindow mainWindow = new MainWindow();
+            
+            app.Run(mainWindow);
+        }
+    }
+}
