@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NBAMatchPredictor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fe59cdd0d0b6a76db76ec837360070773354589")]
 [assembly: System.Reflection.AssemblyProductAttribute("NBAMatchPredictor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NBAMatchPredictor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
