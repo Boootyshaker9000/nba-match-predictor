@@ -50,7 +50,7 @@ This project bridges the gap between Data Science (Python/Scikit-Learn) and Soft
 4.  Click **Calculate Win Probability**.
 5.  The AI will analyze the stats and display the win percentage for both teams.
 
-> **Note:** Ensure that `nba_model.onnx` and `teams_data.json` are located in the same directory as the executable.
+> **Note:** Ensure that `nba-model.onnx` and `team-stats.json` are located in the same directory as the executable.
 
 ## How the Model Works
 The underlying model was trained on a dataset of over 1,500 NBA games. It evaluates **80 unique features** per matchup, including:
