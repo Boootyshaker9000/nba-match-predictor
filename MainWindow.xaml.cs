@@ -41,16 +41,16 @@ namespace NBAMatchPredictor
                 string jsonString = File.ReadAllText("teams_data.json");
                 _nbaDatabase = JsonSerializer.Deserialize<Dictionary<string, TeamStats>>(jsonString);
                 
-                _teamNamesSorted = _nbaDatabase.Keys.OrderBy(k => k).ToList();
+                _teamNamesSorted = _nbaDatabase.Keys.OrderBy(key => key).ToList();
 
                 comboHome.ItemsSource = _teamNamesSorted;
                 comboAway.ItemsSource = _teamNamesSorted;
 
                 _session = new InferenceSession("nba_model.onnx");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                MessageBox.Show($"Initialization error: {ex.Message}");
+                MessageBox.Show($"Initialization error: {exception.Message}");
             }
         }
 
@@ -60,8 +60,8 @@ namespace NBAMatchPredictor
         /// and displays the calculated win probabilities.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
-        private void btnPredict_Click(object sender, RoutedEventArgs e)
+        /// <param name="routedEventArgs">The event data.</param>
+        private void btnPredict_Click(object sender, RoutedEventArgs routedEventArgs)
         {
             if (comboHome.SelectedItem == null || comboAway.SelectedItem == null)
             {
@@ -136,9 +136,9 @@ namespace NBAMatchPredictor
                 txtResult.Text = $"{homeKey} (Home) Win Probability: {homeChance:F1} %\n" +
                                  $"{awayKey} (Away) Win Probability: {awayChance:F1} %";
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                MessageBox.Show($"Prediction error: {ex.Message}");
+                MessageBox.Show($"Prediction error: {exception.Message}");
             }
         }
     }
