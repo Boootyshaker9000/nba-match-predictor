@@ -39,7 +39,7 @@ namespace NBAMatchPredictor
                 comboAway.ItemsSource = _teamNamesSorted;
 
                 // 4. Initialize AI Model
-                _session = new InferenceSession("nba_model.onnx");
+                _session = new InferenceSession("nba-model.onnx");
             }
             catch (Exception exception)
             {
