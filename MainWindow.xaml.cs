@@ -38,7 +38,7 @@ namespace NBAMatchPredictor
         {
             try
             {
-                string jsonString = File.ReadAllText("teams_data.json");
+                string jsonString = File.ReadAllText("team-stats.json");
                 _nbaDatabase = JsonSerializer.Deserialize<Dictionary<string, TeamStats>>(jsonString);
                 
                 _teamNamesSorted = _nbaDatabase.Keys.OrderBy(key => key).ToList();
@@ -46,7 +46,7 @@ namespace NBAMatchPredictor
                 comboHome.ItemsSource = _teamNamesSorted;
                 comboAway.ItemsSource = _teamNamesSorted;
 
-                _session = new InferenceSession("nba_model.onnx");
+                _session = new InferenceSession("nba-model.onnx");
             }
             catch (Exception exception)
             {
